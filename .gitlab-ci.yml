@@ -1,0 +1,25 @@
+stages:
+  - build
+
+before_script:
+  - test -f Miniconda3-latest-Linux-x86_64.sh || wget -nv http://anaconda.rdhpcs.noaa.gov/miniconda/Miniconda3-latest-Linux-x86_64.sh
+  - bash Miniconda3-latest-Linux-x86_64.sh -b -p `pwd`/local_env
+  - export PATH=`pwd`/local_env/bin:$PATH
+  - hash -r
+  - conda config --set always_yes yes --set changeps1 no
+  - conda update -q conda
+  - conda info -a
+
+build:
+  stage: build
+  tags:
+    - pan
+  script:
+    - conda env create --file repro-pan.yml
+    - . activate repro
+    - conda list -e
+    - python -m ipykernel install --user --name repro --display-name "Py3-repro"
+    - papermill Tidal_forcing_TPXO8_OM4p125.ipynb output1.ipynb
+    - md5sum -c checksums_TPXO8.txt
+    - papermill Tidal_forcing_TPXO9_OM4p125.ipynb output2.ipynb
+    - md5sum -c checksums_TPXO9.txt
