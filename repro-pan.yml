@@ -12,5 +12,7 @@ dependencies:
   - matplotlib=3.2.2
   - cartopy=0.17.0
   - xarray=0.16.0
-  - xesmf=0.3.0
   - xgcm=0.3.0
+  - pip
+  - pip:
+    - git+https://github.com/raphaeldussin/xESMF.git@masking_update

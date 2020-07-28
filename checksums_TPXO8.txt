@@ -1,2 +1,2 @@
-853ed8ff24e5f8fad7e5646e048521f8  bilinear_5401x10800_2240x2880_peri.nc
-9aedeab09b7448ed30ac8ccdee32977f  tidal_amplitude_TPXO8_OM4p125.v20200720.nc
+b041a09389442658dd267feee84032f6  regrid_wgts_TPXOv8_OM4p125.nc
+8b0fd7d4e6f09a0fc4c4235eabdf4ce5  tidal_amplitude_TPXO8_OM4p125.v20200728.nc
