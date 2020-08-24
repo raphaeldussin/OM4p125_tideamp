@@ -1,2 +1,4 @@
-b041a09389442658dd267feee84032f6  regrid_wgts_TPXOv8_OM4p125.nc
-8b0fd7d4e6f09a0fc4c4235eabdf4ce5  tidal_amplitude_TPXO8_OM4p125.v20200728.nc
+14b5aaef784a1b6aca87ab92498ef262  ocean_hgrid.nc
+60360d03506cb843cd3994b37e124d0f  ocean_topog.nc
+b8ee8a308dc5dad49b1be2adbe1aba55  regrid_wgts_TPXOv8_OM4p125.nc
+e1281540c42d0719a663d740a44b9476  tidal_amplitude_TPXO8_OM4p125.v20200824.nc
